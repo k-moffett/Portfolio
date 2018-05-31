@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       showHomepage: true,
       showPortfolio: false,
-      showContact: false
+      showContact: false,
+      currentComponent: ''
     }
     this.displayHomepage = this.displayHomepage.bind(this)
     this.displayPortfolio = this.displayPortfolio.bind(this)
@@ -37,6 +38,22 @@ class App extends Component {
       showPortfolio: false,
       showContact: true
     })
+  }
+
+  currentDisplay() {
+    switch(this.state.showHomepage && this.state.showPortfolio && this.state.showContact){
+      case true && false && false:
+        this.setState({currentComponent: <Homepage />})
+        break;
+      case false && true && false:
+        this.setState({currentComponent: <Portfolio />})
+        break;
+      case false && false && true:
+        this.setState({currentComponent: <Contact />})
+        break;
+      default:
+        this.setState({currentComponent: <Homepage />})
+    }
   }
 
   render() {
