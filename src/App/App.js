@@ -6,9 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showHomepage: true,
-      showPortfolio: false,
-      showContact: false,
+      component: 'home'
     }
     this.displayHomepage = this.displayHomepage.bind(this)
     this.displayPortfolio = this.displayPortfolio.bind(this)
@@ -17,33 +15,33 @@ class App extends Component {
   }
 
   displayHomepage() {
-    this.setState({showHomepage: true})
-    this.setState({showPortfolio: false})
-    this.setState({showContact: false})
+    this.setState({component: 'home'})
   }
 
   displayPortfolio() {
-    this.setState({showHomepage: false})
-    this.setState({showPortfolio: true})
-    this.setState({showContact: false})
+    this.setState({component: 'portfolio'})
   }
 
   displayContact() {
-    this.setState({showHomepage: false})
-    this.setState({showPortfolio: false})
-    this.setState({showContact: true})
+    this.setState({component: 'contact'})
   }
 
   currentDisplay() {
     let Component
-    if (this.state.showHomepage === true) {
-      return Component = <Homepage />
-    } else 
-    if (this.state.showPortfolio === true) {
-      return Component = <Portfolio />
-    } else {
-      return Component = <Contact />
+    switch(this.state.component){
+      case 'home':
+        Component = <Homepage />
+          break;
+      case 'portfolio':
+        Component = <Portfolio />
+          break;
+      case 'contact':
+        Component = <Contact />
+          break;
+      default:
+        Component = <Homepage />
     }
+    return Component
   }
 
   render() {
