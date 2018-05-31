@@ -9,7 +9,6 @@ class App extends Component {
       showHomepage: true,
       showPortfolio: false,
       showContact: false,
-      currentComponent: ''
     }
     this.displayHomepage = this.displayHomepage.bind(this)
     this.displayPortfolio = this.displayPortfolio.bind(this)
@@ -22,6 +21,7 @@ class App extends Component {
       showPortfolio: false,
       showContact: false
     })
+    console.log(this.state, 'displayHomepage')
   }
 
   displayPortfolio() {
@@ -30,6 +30,7 @@ class App extends Component {
       showPortfolio: true,
       showContact: false
     })
+    console.log(this.state, 'displayPortfolio')
   }
 
   displayContact() {
@@ -38,37 +39,36 @@ class App extends Component {
       showPortfolio: false,
       showContact: true
     })
+    console.log(this.state, 'displayContact')
   }
 
-  currentDisplay() {
-    switch(this.state.showHomepage && this.state.showPortfolio && this.state.showContact){
-      case true && false && false:
-        this.setState({currentComponent: <Homepage />})
-        break;
-      case false && true && false:
-        this.setState({currentComponent: <Portfolio />})
-        break;
-      case false && false && true:
-        this.setState({currentComponent: <Contact />})
-        break;
-      default:
-        this.setState({currentComponent: <Homepage />})
-    }
-  }
+  // currentDisplay() {
+  //   let currentComponent
+  //   switch(this.showHomepage && this.showPortfolio && this.showContact){
+  //     case true && false && false:
+  //         currentComponent = <Homepage />
+  //       break;
+  //     case false && true && false:
+  //         currentComponent = <Portfolio />
+  //       break;
+  //     case false && false && true:
+  //         currentComponent = <Contact />
+  //       break;
+  //     default:
+  //       currentComponent = <Homepage />
+  //   }
+  //   return currentComponent
+  // }
 
   render() {
+
     return (
       <div className="App">
 
-        <Navbar
-         displayHomepage={this.displayHomepage}
+        <Navbar displayHomepage={this.displayHomepage}
          displayPortfolio={this.displayPortfolio}
          displayContact={this.displayContact}
         />
-
-        <Homepage />
-        <Portfolio />
-        <Contact />
 
       </div>
     );
