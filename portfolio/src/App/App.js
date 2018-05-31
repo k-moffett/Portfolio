@@ -13,62 +13,46 @@ class App extends Component {
     this.displayHomepage = this.displayHomepage.bind(this)
     this.displayPortfolio = this.displayPortfolio.bind(this)
     this.displayContact = this.displayContact.bind(this)
+    this.currentDisplay = this.currentDisplay.bind(this)
   }
 
   displayHomepage() {
-    this.setState({
-      showHomepage: true,
-      showPortfolio: false,
-      showContact: false
-    })
-    console.log(this.state, 'displayHomepage')
+    this.setState({showHomepage: true})
+    this.setState({showPortfolio: false})
+    this.setState({showContact: false})
   }
 
   displayPortfolio() {
-    this.setState({
-      showHomepage: false,
-      showPortfolio: true,
-      showContact: false
-    })
-    console.log(this.state, 'displayPortfolio')
+    this.setState({showHomepage: false})
+    this.setState({showPortfolio: true})
+    this.setState({showContact: false})
   }
 
   displayContact() {
-    this.setState({
-      showHomepage: false,
-      showPortfolio: false,
-      showContact: true
-    })
-    console.log(this.state, 'displayContact')
+    this.setState({showHomepage: false})
+    this.setState({showPortfolio: false})
+    this.setState({showContact: true})
   }
 
-  // currentDisplay() {
-  //   let currentComponent
-  //   switch(this.showHomepage && this.showPortfolio && this.showContact){
-  //     case true && false && false:
-  //         currentComponent = <Homepage />
-  //       break;
-  //     case false && true && false:
-  //         currentComponent = <Portfolio />
-  //       break;
-  //     case false && false && true:
-  //         currentComponent = <Contact />
-  //       break;
-  //     default:
-  //       currentComponent = <Homepage />
-  //   }
-  //   return currentComponent
-  // }
+  currentDisplay() {
+    let Component
+    if (this.state.showHomepage === true) {
+      return Component = <Homepage />
+    } else 
+    if (this.state.showPortfolio === true) {
+      return Component = <Portfolio />
+    } else {
+      return Component = <Contact />
+    }
+  }
 
   render() {
 
     return (
       <div className="App">
 
-        <Navbar displayHomepage={this.displayHomepage}
-         displayPortfolio={this.displayPortfolio}
-         displayContact={this.displayContact}
-        />
+        <Navbar displayHomepage={this.displayHomepage} displayPortfolio={this.displayPortfolio} displayContact={this.displayContact} />
+        <this.currentDisplay />
 
       </div>
     );
