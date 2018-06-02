@@ -8,22 +8,12 @@ class App extends Component {
     this.state = {
       component: 'home'
     }
-    this.displayHomepage = this.displayHomepage.bind(this)
-    this.displayPortfolio = this.displayPortfolio.bind(this)
-    this.displayContact = this.displayContact.bind(this)
     this.currentDisplay = this.currentDisplay.bind(this)
+    this.chooseDisplay = this.chooseDisplay.bind(this)
   }
 
-  displayHomepage() {
-    this.setState({component: 'home'})
-  }
-
-  displayPortfolio() {
-    this.setState({component: 'portfolio'})
-  }
-
-  displayContact() {
-    this.setState({component: 'contact'})
+  chooseDisplay(display) {
+    this.setState({component: display})
   }
 
   currentDisplay() {
@@ -49,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Navbar displayHomepage={this.displayHomepage} displayPortfolio={this.displayPortfolio} displayContact={this.displayContact} />
+        <Navbar chooseDisplay={this.chooseDisplay} />
         <this.currentDisplay />
 
       </div>
