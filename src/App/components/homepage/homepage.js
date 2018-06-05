@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Main from  './main'
 import './index.css'
-//import ProfilPic from '../../images/profilePic.'
+
 
 export default class Homepage extends Component {
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './index.css'
+import profilePic from '../../images/profilePic.jpg'
 
 export default class Main extends Component {
 
@@ -9,7 +10,7 @@ export default class Main extends Component {
             <Container>
                 <Row>
                     <Col xs="6">
-                    Other Col
+                    <img id='profile-pic' src={profilePic} />
                     </Col>
                     <Col xs="6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisi leo, faucibus ut hendrerit sed, lacinia vel dolor. Nam facilisis lectus et odio auctor pulvinar. Vivamus nec justo quis diam varius fringilla. Aenean fringilla, urna non ornare eleifend, felis dui imperdiet ante, egestas ullamcorper sapien nulla sit amet orci. Curabitur consectetur sem nulla, vel commodo tortor ullamcorper id. Cras nec malesuada velit, a consequat nulla. Aliquam luctus ullamcorper sollicitudin. Fusce sodales hendrerit sagittis. Aliquam scelerisque ac nibh at commodo. Morbi accumsan facilisis eleifend. Duis in urna non lectus iaculis faucibus. Aliquam erat volutpat. Nullam quis lectus vitae purus tempor eleifend ac id ligula. Nunc consectetur volutpat magna sit amet euismod. Praesent tempor tincidunt eros, vel ultricies augue tempor eu.
