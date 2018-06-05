@@ -1,0 +1,15 @@
+#profile-pic {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    float: left;
+    shape-outside: ellipse();
+    margin: 1%;
+}
+
+#main {
+    position: relative;
+    text-align: left;
+    background: white;
+}
