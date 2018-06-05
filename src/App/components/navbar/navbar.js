@@ -9,8 +9,8 @@ export default class Navbar extends Component {
 
     render() {
         return(
-            <div>
-                <MenuBtn chooseDisplay={this.props.chooseDisplay} />
+            <div id="navBar">
+                <MenuBtn id="menu-button" chooseDisplay={this.props.chooseDisplay} />
             </div>
         )
     }

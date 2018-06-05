@@ -1,34 +1,51 @@
 import React, { Component } from 'react';
 import './index.css'
-import MenuBtnContent from './menuBtnContent'
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
 
 export default class MenuBtn extends Component {
     constructor(props) {
         super(props)
+        this.toggle = this.toggle.bind(this);
         this.state = {
-            isHidden: true
-        }
+          dropdownOpen: false
+        };
     }
 
-    dropDownClick() {
-        console.log('click')
-        this.setState({
-            isHidden: !this.state.isHidden
-          }, console.log(this.state))
+    toggle() {
+        this.setState(prevState => ({
+          dropdownOpen: !prevState.dropdownOpen
+        }));
+      }
+
+    homepageClick() {
+        this.props.chooseDisplay('home')
+    }
+
+    portfolioClick() {
+        this.props.chooseDisplay('portfolio')
+    }
+
+    contactClick() {
+        this.props.chooseDisplay('contact')
     }
 
     render() {
-        return(
-            <div className='dropDown'>      
-                <button  onClick={(e) => {this.dropDownClick()}}>                       
-                    <div className='menuBtn'></div>
-                    <div className='menuBtn'></div>
-                    <div className='menuBtn'></div> 
-                </button>
-
-                {!this.state.isHidden && <MenuBtnContent chooseDisplay={this.props.chooseDisplay} />}
-                
-            </div>
-        )
+        return (
+            <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+              <DropdownToggle id='dropdownBtn'>
+                <div className='menuBtn'></div>
+                <div className='menuBtn'></div>
+                <div className='menuBtn'></div>
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem><button className='dropdownContent' onClick={(e) => {this.homepageClick()}}>Home</button></DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem><button className='dropdownContent' onClick={(e) => {this.portfolioClick()}}>Portfolio</button></DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem><button className='dropdownContent' onClick={(e) => {this.contactClick()}}>Contact</button></DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          );
     }
   }

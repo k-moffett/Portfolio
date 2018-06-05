@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import mainBackground from '../App/images/mainBackground.jpg'
 import './App.css';
 import   {Contact, Homepage, Navbar, Portfolio} from './components/index'
 
