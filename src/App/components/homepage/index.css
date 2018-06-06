@@ -26,3 +26,11 @@
     border-bottom-left-radius: 50%;
 }
 
+#project-display {
+    background: lightblue;
+    position: relative;
+    margin-top: 2%;
+    height: 300px;
+    width: 300px;
+}
+
