@@ -8,7 +8,7 @@ export default class Homepage extends Component {
     render() {
         return(
             <div>
-                <h1>Homepage</h1>
+                <h1>Kurtis Moffett</h1>
                 <Main />
             </div>
         )

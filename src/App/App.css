@@ -28,10 +28,19 @@
 }
 
 body{
-  background: url("./images/mainBackground.jpg") no-repeat center center fixed; 
+  background: 
+  linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+  url("./images/mainBackground.jpg"); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+}
+
+#body{
+  background:
+  linear-gradient(red, yellow);
+  background-size: cover;
+
 }
