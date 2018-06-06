@@ -4,11 +4,25 @@
     width: 250px;
     position: relative;
     float: left;
+    right:2%;
     shape-outside: ellipse();
     margin: 1%;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px grey;
+    z-index: 1;
 }
 
 #main {
     position: relative;
     text-align: left;
+    background: 
+    linear-gradient(to right, rgb(32, 108, 131), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, white, rgba(255, 255, 255, 0)),
+    white;
+    box-shadow: 10px 5px 5px rgba(30, 75, 115, 1);
+    border-radius: 25px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
 }
+
