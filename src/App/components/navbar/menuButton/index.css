@@ -10,9 +10,10 @@
     height: 5px;
     background-color: black;
     margin: 6px 0;
+
   }
 
   #dropdownBtn {
    position: relative;
-   right: 45%;
+   left: 45%;
  }

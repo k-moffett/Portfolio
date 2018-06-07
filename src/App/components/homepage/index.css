@@ -26,11 +26,13 @@
     border-bottom-left-radius: 50%;
 }
 
-#project-display {
-    background: lightblue;
+#name {
     position: relative;
-    margin-top: 2%;
-    height: 300px;
-    width: 300px;
-}
+    left: 3%;
+    width: 18%;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(231, 231, 253, 0.562);
+    margin-top: 1%;
 
+}
