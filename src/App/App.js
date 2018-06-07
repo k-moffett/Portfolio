@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import   {Homepage, Navbar, Portfolio} from './components/index'
+import   {Homepage, Navbar, Portfolio, Social} from './components/index'
 
 class App extends Component {
   constructor(props) {
@@ -38,6 +38,7 @@ class App extends Component {
 
         <Navbar chooseDisplay={this.chooseDisplay} />
         <this.currentDisplay />
+        <Social />
 
       </div>
     );
