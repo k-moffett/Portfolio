@@ -26,10 +26,6 @@ export default class MenuBtn extends Component {
         this.props.chooseDisplay('portfolio')
     }
 
-    contactClick() {
-        this.props.chooseDisplay('contact')
-    }
-
     render() {
         return (
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -42,8 +38,6 @@ export default class MenuBtn extends Component {
                 <DropdownItem><button className='dropdownContent' onClick={(e) => {this.homepageClick()}}>Home</button></DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem><button className='dropdownContent' onClick={(e) => {this.portfolioClick()}}>Portfolio</button></DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem><button className='dropdownContent' onClick={(e) => {this.contactClick()}}>Contact</button></DropdownItem>
               </DropdownMenu>
             </Dropdown>
           );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import   {Contact, Homepage, Navbar, Portfolio} from './components/index'
+import   {Homepage, Navbar, Portfolio} from './components/index'
 
 class App extends Component {
   constructor(props) {
@@ -24,9 +24,6 @@ class App extends Component {
           break;
       case 'portfolio':
         Component = <Portfolio />
-          break;
-      case 'contact':
-        Component = <Contact />
           break;
       default:
         Component = <Homepage />
