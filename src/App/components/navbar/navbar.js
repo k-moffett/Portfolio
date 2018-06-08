@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css'
-import MenuBtn from './menuButton/menuBtn'
+import {MenuBtn, Social} from './components/index'
 
 export default class Navbar extends Component {
     constructor(props) {
@@ -10,6 +10,7 @@ export default class Navbar extends Component {
     render() {
         return(
             <div id="navBar">
+                <Social />
                 <MenuBtn id="menu-button" chooseDisplay={this.props.chooseDisplay} />
             </div>
         )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import './index.css'
+import Github from '../../../images/github.png'
+import LinkedIn from '../../../linkedin.png'
 
 
 export default class Social extends Component {
@@ -11,11 +12,11 @@ export default class Social extends Component {
               <Row>
 
                 <Col>
-                GitHub
+                <img src={Github} />
                 </Col>
                 
                 <Col>
-                LinkedIn
+                <img src={LinkedIn} />
                 </Col>
         
               </Row>

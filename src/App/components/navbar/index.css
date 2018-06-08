@@ -6,3 +6,30 @@
     box-shadow: 5px 2.5px 2.5px rgba(30, 75, 115, 1);
     box-shadow: 10px 5px 5px rgba(11, 31, 49, 0.76);
 }
+
+.dropdownContent{
+    background:none;
+    border:none;
+    font-size:1em;
+    color:blue;
+  }
+
+  .menuBtn {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+  }
+
+  #dropdownBtn {
+   position: relative;
+   left: 45%;
+ }
+
+ #social {
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    background: red;
+}
