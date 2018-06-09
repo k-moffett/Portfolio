@@ -4,8 +4,6 @@ import githubLogo from '../../../images/github.jpg';
 import linkedinLogo from '../../../images/linkedin.jpg';
 import twitterLogo from '../../../images/twitter.jpg';
 
-
-
 export default class MenuBtns extends Component {
     constructor(props) {
         super(props)
@@ -32,15 +30,15 @@ export default class MenuBtns extends Component {
     githubLink() {
       return (
         <a href="https://github.com/moffkr91" target="_blank">
-          <img id="githubImg"  src={githubLogo} alt="github" />
+          <img className='social-links' src={githubLogo} alt="github" />
         </a>
         );
     }
 
     linkedinLink() {
       return (
-        <a href="https://www.linkedin.com/in/kurtis-moffett-88388aa5/" target="_blank">
-          <img id="linkedinImg"  src={linkedinLogo} alt="github" />
+        <a  href="https://www.linkedin.com/in/kurtis-moffett-88388aa5/" target="_blank">
+          <img className='social-links' src={linkedinLogo} alt="github" />
         </a>
          );
     }
@@ -48,7 +46,7 @@ export default class MenuBtns extends Component {
     twitterLink() {
       return (
         <a href="https://twitter.com/moffkr91" target="_blank">
-          <img id="linkedinImg"  src={twitterLogo} alt="github" />
+          <img className='social-links' src={twitterLogo} alt="github" />
         </a>
         );
     }

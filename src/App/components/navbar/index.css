@@ -25,20 +25,19 @@
 #dropdownBtn {
    position: relative;
    left: 40%;
+   background: rgb(118, 123, 167);
  }
 
  #social {
-    position: absolute;
+    position: relative;
     text-align: left;
     background: grey;
 }
 
-#githubImg {
+.social-links {
+  position: relative;
+  right:38%;
   height: 48px;
   width: 48px;
-}
-
-#linkedinImg {
-  height: 48px;
-  width: 48px;
+  margin-right: 1%;
 }
