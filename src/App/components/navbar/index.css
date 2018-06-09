@@ -69,3 +69,42 @@
   }
 }
 
+@media screen and (min-width: 400px) {
+  #dropdownBtn {
+    left: 20%
+  }
+  
+  .social-links {
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  #dropdownBtn {
+    left: 26%
+  }
+  
+  .social-links {
+    right: 26%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  #dropdownBtn {
+    left: 31%
+  }
+  
+  .social-links {
+    right: 31%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #dropdownBtn {
+    left: 36%
+  }
+  
+  .social-links {
+    right: 36%;
+  }
+}

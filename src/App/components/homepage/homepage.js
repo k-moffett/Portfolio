@@ -11,10 +11,11 @@ export default class Homepage extends Component {
                 <div id="name">
                     <p>Kurtis Moffett</p>
                 </div>
-                <Main />
                 <div id='contact'>
                     <a href='mailto:moffkr91@gmail.com'>moffkr91@gmail.com</a>
                 </div>
+                <Main />
+                
             </div>
         )
     }
