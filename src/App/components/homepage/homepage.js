@@ -9,9 +9,12 @@ export default class Homepage extends Component {
         return(
             <div>
                 <div id="name">
-                    <h1>Kurtis Moffett</h1>
+                    <p>Kurtis Moffett</p>
                 </div>
                 <Main />
+                <div id='contact'>
+                    <a href='mailto:moffkr91@gmail.com'>moffkr91@gmail.com</a>
+                </div>
             </div>
         )
     }

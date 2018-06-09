@@ -23,13 +23,26 @@
     box-shadow: 10px 5px 5px rgba(30, 75, 115, 1);
     border-radius: 25px;
     border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 25px;
 }
 
 #name {
     position: relative;
     left: 3%;
     width: 18%;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(231, 231, 253, 0.562);
+    margin-top: 1%;
+
+}
+
+#contact {
+    position: relative;
+    left: 3%;
+    width: 18%;
+    font-size: 24px;
     text-align: center;
     border-radius: 15px;
     background: rgba(231, 231, 253, 0.562);
