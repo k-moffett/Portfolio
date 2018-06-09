@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import   {Homepage, Navbar, Portfolio} from './components/index'
+import MenuBts from './components/navbar/components/menuBtns'
 
 class App extends Component {
   constructor(props) {

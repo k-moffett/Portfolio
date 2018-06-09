@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Row, Col, Container } from 'reactstrap';
 import './index.css'
 
 export default class Portfolio extends Component {
 
     render() {
         return(
-
+            <Container>
             <Row className="row">
                 <Col sm="1"></Col>
                 <Col sm="5">
@@ -26,6 +26,7 @@ export default class Portfolio extends Component {
                 </Col>
                 <Col sm="1"></Col>
             </Row>
+            </Container>
         )
     }
 }

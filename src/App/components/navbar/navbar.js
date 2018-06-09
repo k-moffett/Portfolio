@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './index.css'
-import {MenuBtn, Social} from './components/index'
+import MenuBtns from './components/menuBtns'
+
 
 export default class Navbar extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         return(
             <div id="navBar">
-                <Social />
-                <MenuBtn id="menu-button" chooseDisplay={this.props.chooseDisplay} />
+                <MenuBtns id="menu-button" chooseDisplay={this.props.chooseDisplay} />
             </div>
         )
     }
